@@ -110,7 +110,6 @@ namespace LoLHelpAplication
                 //PlayerList.Add(PlayerViewModel.FromPlayer(player.Values.First()));
                 IdTextBox = FindPlayer.id.ToString();
                 
-                
             }
             catch (WebException ex)
             {
