@@ -15,34 +15,34 @@ namespace LoLHelpAplication.ViewModel
             return new MatchViewModel
             {
                 _mapId = match.matchId,
-                _assist = match.participants.stats.assist,
-                _bot = match.participants.bot,
-                _championId = match.participants.championId,
-                _deaths = match.participants.stats.deaths,
-                _goldEarned = match.participants.stats.goldEarned,
-                _item0Id = match.participants.stats.item0,
-                _item1Id = match.participants.stats.item1,
-                _item2Id = match.participants.stats.item2,
-                _item3Id = match.participants.stats.item3,
-                _item4Id = match.participants.stats.item4,
-                _item5Id = match.participants.stats.item5,
-                _item6Id = match.participants.stats.item6,
-                _kill = match.participants.stats.kill,
-                _lane = match.participants.timeLine.lane,
+                _assist = match.participants.Single().stats.assist,
+                _bot = match.participants.Single().bot,
+                _championId = match.participants.Single().championId,
+                _deaths = match.participants.Single().stats.deaths,
+                _goldEarned = match.participants.Single().stats.goldEarned,
+                _item0Id = match.participants.Single().stats.item0,
+                _item1Id = match.participants.Single().stats.item1,
+                _item2Id = match.participants.Single().stats.item2,
+                _item3Id = match.participants.Single().stats.item3,
+                _item4Id = match.participants.Single().stats.item4,
+                _item5Id = match.participants.Single().stats.item5,
+                _item6Id = match.participants.Single().stats.item6,
+                _kill = match.participants.Single().stats.kill,
+                _lane = match.participants.Single().timeLine.lane,
                 _matchDuration = match.matchDuration,
-                _matchHistoryUri = match.participantIdentities.players.matchHistoryUri,
+                _matchHistoryUri = match.participantIdentities.Single().player.matchHistoryUri,
                 _matchId = match.matchId,
                 _matchMode = match.matchMode,
                 _queueType = match.queueType,
                 _regionType = match.regionType,
-                _role = match.participants.timeLine.role,
+                _role = match.participants.Single().timeLine.role,
                 _sesson = match.seson,
-                _spell1Id = match.participants.spell1Id,
-                _spell2Id = match.participants.spell2Id,
-                _sumarryId = match.participantIdentities.players.summaryId,
-                _summaryName = match.participantIdentities.players.summaryName,
-                _teamId = match.participants.teamId,
-                _winner = match.participants.stats.winner
+                _spell1Id = match.participants.Single().spell1Id,
+                _spell2Id = match.participants.Single().spell2Id,
+                _sumarryId = match.participantIdentities.Single().player.summaryId,
+                _summaryName = match.participantIdentities.Single().player.summaryName,
+                _teamId = match.participants.Single().teamId,
+                _winner = match.participants.Single().stats.winner
             };
         }
 
@@ -110,7 +110,7 @@ namespace LoLHelpAplication.ViewModel
         public string RegionType
         {
             get { return _regionType; }
-            set { _regionType = value; }
+            set { _regionType = value; RaisePropertyChanged(); }
         }
 
         private string _sesson;
@@ -118,7 +118,7 @@ namespace LoLHelpAplication.ViewModel
         public string Sesson
         {
             get { return _sesson; }
-            set { _sesson = value; }
+            set { _sesson = value; RaisePropertyChanged(); }
         }
 
         private int _championId;

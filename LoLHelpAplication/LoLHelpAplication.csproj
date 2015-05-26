@@ -81,6 +81,7 @@
     <Compile Include="Models\MatchHistory\ParticipantStats.cs" />
     <Compile Include="Models\MatchHistory\ParticipantTimeLine.cs" />
     <Compile Include="Models\MatchHistory\Player.cs" />
+    <Compile Include="Models\MatchHistory\PlayerHistory.cs" />
     <Compile Include="playerWindow.xaml.cs">
       <DependentUpon>playerWindow.xaml</DependentUpon>
     </Compile>

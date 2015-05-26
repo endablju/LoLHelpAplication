@@ -5,7 +5,9 @@
     <Grid>
         <Label Content="Label" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" Width="298" FontSize="25" Name="PlayerLabel" />
         <Label Content="{Binding IdTextBox}" HorizontalAlignment="Left" Margin="40,71,0,0" VerticalAlignment="Top" Width="263" IsEnabled="false"/>
-        
-        
+        <Button Content="CurrentGame" Command="{Binding CurrentGame}" HorizontalAlignment="Left" Margin="205,295,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="History" Command="{Binding History}" HorizontalAlignment="Left" Margin="389,295,0,0" VerticalAlignment="Top" Width="75"/>
+
+
     </Grid>
 </Window>

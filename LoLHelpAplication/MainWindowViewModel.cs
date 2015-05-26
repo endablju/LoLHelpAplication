@@ -75,7 +75,7 @@ namespace LoLHelpAplication
             }
         }
 
-        private ObservableCollection<MatchViewModel> _matchList;
+        private ObservableCollection<MatchViewModel> _matchList = new ObservableCollection<MatchViewModel>();
 
         public ObservableCollection<MatchViewModel> MatchList
         {
@@ -326,10 +326,11 @@ namespace LoLHelpAplication
                     result = reader.ReadToEnd();
 
                 }
-                var matchHistory = JsonConvert.DeserializeObject<List<MatchSummary>>(result);
-                foreach (var listMatchHistory in matchHistory)
+                var matchHistory = JsonConvert.DeserializeObject<PlayerHistory>(result);
+                
+                foreach (var listMatchHistory in matchHistory.matches)
                 {
-                       MatchList.Add(MatchViewModel.FromMatchHistory(listMatchHistory));                   
+                MatchList.Add(MatchViewModel.FromMatchHistory(listMatchHistory));                   
                 }
             }
             catch (WebException ex)
@@ -349,7 +350,12 @@ namespace LoLHelpAplication
             }
         }
 
+        private BasicCommand _history;
 
+        public BasicCommand History
+        {
+            get { return _history ?? (_history = new BasicCommand(searchMatchHistory)); }
+        }
         private void searchCurrentGame(object _)
         {
             String url = "https://eune.api.pvp.net/observer-mode/rest/consumer/getSpectatorGameInfo/EUN1/" + IdTextBox + "?api_key=77692cb6-ae7f-40a3-922c-d5ae529236a3";
@@ -381,6 +387,12 @@ namespace LoLHelpAplication
                     MessageBox.Show("Unauthorized");
 
             }
+        }
+        private BasicCommand _currentGame;
+
+        public BasicCommand CurrentGame
+        {
+            get { return _currentGame ?? (_currentGame = new BasicCommand(searchCurrentGame)); }
         }
         /*
         private BasicCommand _displeyPlayers;

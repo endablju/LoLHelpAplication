@@ -25,8 +25,8 @@ namespace LoLHelpAplication.MatchHistory
         [DataMember]
         public string seson { get; set; }
         [DataMember]
-        public ParticipanIdentity participantIdentities { get; set; }
+        public List<ParticipanIdentity> participantIdentities { get; set; }
         [DataMember]
-        public Participant participants { get; set; }
+        public List<Participant> participants { get; set; }
     }
 }
