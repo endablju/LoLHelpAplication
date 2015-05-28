@@ -27,11 +27,11 @@
             <DockPanel Grid.Column="0" Margin="0,10,24,0"  LastChildFill="False" Grid.ColumnSpan="2">
                 <TabControl Width="969" Margin="0,38,0,10" >
 
-                    <TabItem FontSize="18" Header="Bohaterowie" Margin="219,0,-223,-2" >
+                    <TabItem FontSize="18" Header="Champions" Margin="219,0,-223,-2" >
                         <Grid>
                         <Button Grid.Column="0"
                                 Command="{Binding LoadChampions}"
-                                Content="Wczytaj dane" Margin="44,425,624,12" />
+                                Content="Read data" Margin="44,425,624,12" />
                         <ItemsControl ItemsSource="{Binding ChampionList}" ItemTemplate="{StaticResource ChampionTemplate}" Margin="10,0">
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
@@ -42,7 +42,7 @@
                         </Grid>
                     </TabItem>
 
-                    <TabItem FontSize="18" Header="Czary" Margin="289,0,-293,-2">
+                    <TabItem FontSize="18" Header="Spell" Margin="289,0,-293,-2">
                         <Grid>
                             <ListBox Grid.Row="0" Grid.Column="0" ItemsSource="{Binding SpellList}" SelectedItem="{Binding SelectedSpell}" HorizontalAlignment="Left" Margin="10,13,0,60" Width="281">
                                 <ListBox.ItemTemplate>
@@ -58,7 +58,7 @@
                             </ListBox>
                             <Button Grid.Column="0"
                                 Command="{Binding LoadSpells}"
-                                Content="Wczytaj dane" Margin="44,425,624,12" />
+                                Content="Read data" Margin="44,425,624,12" />
 
                             <views:SpellViews DataContext="{Binding SelectedSpell}" DockPanel.Dock="Top" HorizontalAlignment="Left" Width="496" Margin="301,0,0,0" Height="449" />
 
@@ -67,7 +67,7 @@
                         </Grid>
                     </TabItem>
 
-                    <TabItem FontSize="18" Header="Przedmioty" Margin="351,0,-355,-2" >
+                    <TabItem FontSize="18" Header="Items" Margin="351,0,-355,-2" >
                         <Grid>
                             <ListBox Grid.Row="0" Grid.Column="0" ItemsSource="{Binding ItemList}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Left" Margin="10,13,0,60" Width="281">
                                 <ListBox.ItemTemplate>
@@ -86,7 +86,7 @@
                             </DockPanel>
                             <Button Grid.Column="0"
                                 Command="{Binding LoadItems}"
-                                Content="Wczytaj dane" Margin="44,425,624,12" />
+                                Content="Read data" Margin="44,425,624,12" />
 
                         </Grid>
                     </TabItem>
@@ -95,7 +95,7 @@
             </DockPanel>
 
             <TextBox Text="{Binding SearchTextBox}" HorizontalAlignment="Left" Height="23" Margin="10,18,0,0" TextWrapping="Wrap" Name="searchTextBox"   VerticalAlignment="Top" Width="211" Grid.Column="1"/>
-            <Button Content="Szukaj" Command="{Binding SearchSummoner}" HorizontalAlignment="Left" Margin="255,0,0,523" Name="searchButton" Width="55" RenderTransformOrigin="0.474,0.15" Grid.Column="1" Height="23" VerticalAlignment="Bottom" Click="searchButton_Click"/>
+            <Button Content="Search" Command="{Binding SearchSummoner}" HorizontalAlignment="Left" Margin="255,0,0,523" Name="searchButton" Width="55" RenderTransformOrigin="0.474,0.15" Grid.Column="1" Height="23" VerticalAlignment="Bottom" Click="searchButton_Click"/>
 
         </Grid>
 

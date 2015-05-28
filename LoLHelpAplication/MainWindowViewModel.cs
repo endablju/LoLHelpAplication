@@ -394,6 +394,13 @@ namespace LoLHelpAplication
         {
             get { return _currentGame ?? (_currentGame = new BasicCommand(searchCurrentGame)); }
         }
+        
+        public MainWindowViewModel()
+        {
+            OnLoadSpell(this);
+            OnLoadItems(this);
+            OnLoadChampions(this);
+        }
         /*
         private BasicCommand _displeyPlayers;
 
