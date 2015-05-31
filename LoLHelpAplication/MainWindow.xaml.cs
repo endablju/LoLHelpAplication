@@ -36,6 +36,7 @@ namespace LoLHelpAplication
                 player.PlayerLabel.Content = "Player: " + searchTextBox.Text;
                 //player.Show();
                 player.DataContext = _model;
+                //if ()
                 player.Show();
                 //this.Close();
             }

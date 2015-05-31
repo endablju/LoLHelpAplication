@@ -94,6 +94,12 @@
     <Compile Include="ViewModel\ItemViewModel.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="ViewModel\MatchViewModel.cs" />
+    <Compile Include="View\ChampionView.xaml.cs">
+      <DependentUpon>ChampionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HistoryView.xaml.cs">
+      <DependentUpon>HistoryView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ItemViews.xaml.cs">
       <DependentUpon>ItemViews.xaml</DependentUpon>
     </Compile>
@@ -114,6 +120,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="playerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ChampionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HistoryView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

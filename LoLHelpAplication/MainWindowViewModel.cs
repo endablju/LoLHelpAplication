@@ -157,52 +157,9 @@ namespace LoLHelpAplication
             }
         }
 
-        private bool _isLoadingItems;
-
-        public bool IsLoadingItems
-        {
-            get { return _isLoadingItems; }
-            set
-            {
-                _isLoadingItems = value;
-                RaisePropertyChanged();
-            }
-        }
-
-        private bool _isLoadingSpell;
-
-        public bool IsLoadingSpells
-        {
-            get { return _isLoadingSpell; }
-            set
-            {
-                _isLoadingSpell = value;
-                RaisePropertyChanged();
-            }
-        }
-
-        private bool _isLoadingChampions;
-
-        public bool IsLoadingChampions
-        {
-            get { return _isLoadingChampions; }
-            set
-            {
-                _isLoadingChampions = value;
-                RaisePropertyChanged();
-            }
-        }
-
-        private BasicCommand _loadItems;
-
-        public BasicCommand LoadItems
-        {
-            get { return _loadItems ?? (_loadItems = new BasicCommand(OnLoadItems, CanLoadItems)); }
-        }
-
         private void OnLoadItems(object _)
         {
-            IsLoadingItems = true;
+            //IsLoadingItems = true;
 
             Task<ItemListDto>.Factory.StartNew(
                 () =>
@@ -217,13 +174,8 @@ namespace LoLHelpAplication
                     {
                         ItemList.Add(ItemViewModel.FromItem(item.Value));
                     }
-                    IsLoadingItems = false;
+                    //IsLoadingItems = false;
                 }, TaskScheduler.FromCurrentSynchronizationContext());
-        }
-
-        private bool CanLoadItems(object _)
-        {
-            return !IsLoadingItems;
         }
 
         private ItemViewModel _selectedItem;
@@ -247,14 +199,10 @@ namespace LoLHelpAplication
                 RaisePropertyChanged();
             }
         } 
-        private bool CanLoadSpell(object _)
-        {
-            return !IsLoadingSpells;
-        }
-
+        
         private void OnLoadSpell(object _)
         {
-            IsLoadingSpells = true;
+            //IsLoadingSpells = true;
 
             Task<SummonerSpellListDto>.Factory.StartNew(
                 () =>
@@ -269,25 +217,13 @@ namespace LoLHelpAplication
                     {
                         SpellList.Add(SpellViewModel.FromSpell(spell.Value));
                     }
-                    IsLoadingSpells = false;
+                    //IsLoadingSpells = false;
                 }, TaskScheduler.FromCurrentSynchronizationContext());
-        }
-
-        private BasicCommand _loadSpells;
-
-        public BasicCommand LoadSpells
-        {
-            get { return _loadSpells ?? (_loadSpells = new BasicCommand(OnLoadSpell, CanLoadSpell)); }
-        }
-
-        private bool CanLoadChampions(object _)
-        {
-            return !IsLoadingChampions;
         }
 
         private void OnLoadChampions(object _)
         {
-            IsLoadingChampions = true;
+            //IsLoadingChampions = true;
 
             Task<ChampionsListDto>.Factory.StartNew(
                 () =>
@@ -302,15 +238,8 @@ namespace LoLHelpAplication
                     {
                         ChampionList.Add(ChampionViewModel.FromChampion(champion.Value));
                     }
-                    IsLoadingChampions = false;
+                    //IsLoadingChampions = false;
                 }, TaskScheduler.FromCurrentSynchronizationContext());
-        }
-
-        private BasicCommand _loadChampions;
-
-        public BasicCommand LoadChampions
-        {
-            get { return _loadChampions ?? (_loadChampions = new BasicCommand(OnLoadChampions, CanLoadChampions)); }
         }
 
         private void searchMatchHistory(object _)
@@ -356,6 +285,7 @@ namespace LoLHelpAplication
         {
             get { return _history ?? (_history = new BasicCommand(searchMatchHistory)); }
         }
+       
         private void searchCurrentGame(object _)
         {
             String url = "https://eune.api.pvp.net/observer-mode/rest/consumer/getSpectatorGameInfo/EUN1/" + IdTextBox + "?api_key=77692cb6-ae7f-40a3-922c-d5ae529236a3";
@@ -388,6 +318,7 @@ namespace LoLHelpAplication
 
             }
         }
+       
         private BasicCommand _currentGame;
 
         public BasicCommand CurrentGame
@@ -401,20 +332,113 @@ namespace LoLHelpAplication
             OnLoadItems(this);
             OnLoadChampions(this);
         }
+
+        private MatchViewModel _selectedMatch;
+        public MatchViewModel SelectedMatch
+        {
+            get { return _selectedMatch; }
+            set
+            {
+                _selectedMatch = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        private ChampionViewModel _selectedChampion;
+        public ChampionViewModel SelectedChampion
+        {
+            get { return _selectedChampion; }
+            set
+            {
+                _selectedChampion = value;
+                RaisePropertyChanged();
+            }
+        } 
         /*
-        private BasicCommand _displeyPlayers;
+       private BasicCommand _displeyPlayers;
 
-        public BasicCommand DispleyPlayers
-        {
-            get { return _displeyPlayers ?? (_displeyPlayers = new BasicCommand(displeyPlayersListBox)); }
-        }
+       public BasicCommand DispleyPlayers
+       {
+           get { return _displeyPlayers ?? (_displeyPlayers = new BasicCommand(displeyPlayersListBox)); }
+       }
 
-        private void displeyPlayersListBox(object _)
-        {
+       private void displeyPlayersListBox(object _)
+       {
             
-        }
-        */
-        
-        
+       }
+
+       private bool _isLoadingItems;
+
+       public bool IsLoadingItems
+       {
+           get { return _isLoadingItems; }
+           set
+           {
+               _isLoadingItems = value;
+               RaisePropertyChanged();
+           }
+       }
+
+       private bool _isLoadingSpell;
+
+       public bool IsLoadingSpells
+       {
+           get { return _isLoadingSpell; }
+           set
+           {
+               _isLoadingSpell = value;
+               RaisePropertyChanged();
+           }
+       }
+
+       private bool _isLoadingChampions;
+
+       public bool IsLoadingChampions
+       {
+           get { return _isLoadingChampions; }
+           set
+           {
+               _isLoadingChampions = value;
+               RaisePropertyChanged();
+           }
+       }
+
+       private BasicCommand _loadItems;
+
+       public BasicCommand LoadItems
+       {
+           get { return _loadItems ?? (_loadItems = new BasicCommand(OnLoadItems, CanLoadItems)); }
+       }
+
+       private bool CanLoadChampions(object _)
+       {
+           return !IsLoadingChampions;
+       }
+
+       private BasicCommand _loadChampions;
+
+       public BasicCommand LoadChampions
+       {
+           get { return _loadChampions ?? (_loadChampions = new BasicCommand(OnLoadChampions, CanLoadChampions)); }
+       }
+
+       private BasicCommand _loadSpells;
+
+       public BasicCommand LoadSpells
+       {
+           get { return _loadSpells ?? (_loadSpells = new BasicCommand(OnLoadSpell, CanLoadSpell)); }
+       }
+
+       private bool CanLoadSpell(object _)
+       {
+           return !IsLoadingSpells;
+       }
+
+       private bool CanLoadItems(object _)
+       {
+           return !IsLoadingItems;
+       }
+       // */
+
     }
 }

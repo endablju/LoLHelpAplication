@@ -15,8 +15,9 @@ namespace LoLHelpAplication.ViewModel
             return new MatchViewModel
             {
                 _mapId = match.matchId,
-                _assist = match.participants.Single().stats.assist,
+                _assists = match.participants.Single().stats.assists,
                 _bot = match.participants.Single().bot,
+                //_championString =  ,
                 _championId = match.participants.Single().championId,
                 _deaths = match.participants.Single().stats.deaths,
                 _goldEarned = match.participants.Single().stats.goldEarned,
@@ -27,7 +28,7 @@ namespace LoLHelpAplication.ViewModel
                 _item4Id = match.participants.Single().stats.item4,
                 _item5Id = match.participants.Single().stats.item5,
                 _item6Id = match.participants.Single().stats.item6,
-                _kill = match.participants.Single().stats.kill,
+                _kills = match.participants.Single().stats.kills,
                 _lane = match.participants.Single().timeLine.lane,
                 _matchDuration = match.matchDuration,
                 _matchHistoryUri = match.participantIdentities.Single().player.matchHistoryUri,
@@ -172,12 +173,12 @@ namespace LoLHelpAplication.ViewModel
             set { _bot = value; RaisePropertyChanged(); }
         }
 
-        private long _kill;
+        private long _kills;
 
-        public long Kill
+        public long Kills
         {
-            get { return _kill; }
-            set { _kill = value; RaisePropertyChanged(); }
+            get { return _kills; }
+            set { _kills = value; RaisePropertyChanged(); }
         }
 
         private long _deaths;
@@ -188,12 +189,12 @@ namespace LoLHelpAplication.ViewModel
             set { _deaths = value; RaisePropertyChanged();}
         }
 
-        private long _assist;
+        private long _assists;
 
-        public long Assist
+        public long Assists
         {
-            get { return _assist; }
-            set { _assist = value; RaisePropertyChanged();}
+            get { return _assists; }
+            set { _assists = value; RaisePropertyChanged();}
         }
 
         private long _goldEarned;
@@ -345,6 +346,17 @@ namespace LoLHelpAplication.ViewModel
             get { return _sumarryId; }
             set { _sumarryId = value; RaisePropertyChanged();}
         }
-      
+
+       /* private string _championString;
+
+        public string ChampionString
+        {
+            get { return _championString; }
+            set
+            {
+                _championString = value;
+                RaisePropertyChanged();
+            }
+        }*/
     }
 }

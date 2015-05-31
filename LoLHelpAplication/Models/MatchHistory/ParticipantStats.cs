@@ -10,11 +10,11 @@ namespace LoLHelpAplication.MatchHistory
     public class ParticipantStats
     {
         [DataMember]
-        public long kill { get; set; }
+        public long kills { get; set; }
         [DataMember]
         public long deaths { get; set; }
         [DataMember]
-        public long assist { get; set; }
+        public long assists { get; set; }
         [DataMember]
         public long goldEarned { get; set; }
         [DataMember]

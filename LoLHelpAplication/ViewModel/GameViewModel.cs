@@ -22,7 +22,7 @@ namespace LoLHelpAplication.ViewModel
                 _gameType = info.gameType,
                 _mapId = info.mapId,
                 //Participants = CurrentGameParticipantsViewModel.fromParticipants(info.participants.);
-                //_participants =     
+                //_participants =   
             };
         }
 

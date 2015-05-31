@@ -5,8 +5,7 @@
         Title="LoLHelpAplication" Height="600" Width="1024">
     <Window.Resources>
         <DataTemplate x:Key="ChampionTemplate">
-                <Image Height="50" Width="50" Source="{Binding DisplayedImage}"></Image>
-                <!--<Label Content="{Binding Name}" HorizontalAlignment="Left" Margin="240,34,0,0" VerticalAlignment="Top" Width="242"/>-->
+            <Image Height="50" Width="50" Source="{Binding DisplayedImage}"></Image>
         </DataTemplate>
         
         <DataTemplate x:Key="SkillTemplate">
@@ -29,16 +28,38 @@
 
                     <TabItem FontSize="18" Header="Champions" Margin="219,0,-223,-2" >
                         <Grid>
-                        <Button Grid.Column="0"
+
+                            <ListBox Grid.Row="0" Grid.Column="0" ItemsSource="{Binding ChampionList}" SelectedItem="{Binding SelectedChampion}" HorizontalAlignment="Left" Margin="10,13,0,60" Width="281">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate DataType="ViewModel:ChampionViewModel">
+                                        <Border>
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="50" />
+                                                    <ColumnDefinition Width="Auto" SharedSizeGroup="Names" />
+                                                    <ColumnDefinition Width="20" />
+                                                </Grid.ColumnDefinitions>
+
+                                                <TextBlock Grid.Column="0" Text="{Binding Id}"/>
+                                                <TextBlock Grid.Column="1" Text="{Binding Name}"/>
+                                            </Grid>
+                                        </Border>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                            <views:ChampionView DataContext="{Binding SelectedChampion}" DockPanel.Dock="Top" HorizontalAlignment="Left" Width="496" Margin="301,0,0,0" Height="449" />
+
+                            <!--<Button Grid.Column="0"
                                 Command="{Binding LoadChampions}"
-                                Content="Read data" Margin="44,425,624,12" />
-                        <ItemsControl ItemsSource="{Binding ChampionList}" ItemTemplate="{StaticResource ChampionTemplate}" Margin="10,0">
+                                Content="Read data" Margin="44,425,624,12" />-->
+                        <!--<ItemsControl ItemsSource="{Binding ChampionList}" ItemTemplate="{StaticResource ChampionTemplate}" Margin="10,0">
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
                                         <WrapPanel />
                                     </ItemsPanelTemplate>
                             </ItemsControl.ItemsPanel>
-                        </ItemsControl>
+                        </ItemsControl>-->
+                            
                         </Grid>
                     </TabItem>
 
@@ -56,9 +77,9 @@
                                     </DataTemplate>
                                 </ListBox.ItemTemplate>
                             </ListBox>
-                            <Button Grid.Column="0"
+                            <!--<Button Grid.Column="0"
                                 Command="{Binding LoadSpells}"
-                                Content="Read data" Margin="44,425,624,12" />
+                                Content="Read data" Margin="44,425,624,12" />-->
 
                             <views:SpellViews DataContext="{Binding SelectedSpell}" DockPanel.Dock="Top" HorizontalAlignment="Left" Width="496" Margin="301,0,0,0" Height="449" />
 
@@ -84,9 +105,9 @@
                                 <views:ItemViews DataContext="{Binding SelectedItem}" DockPanel.Dock="Top" HorizontalAlignment="Left" Width="496" Margin="301,0,0,0" Height="449" />
 
                             </DockPanel>
-                            <Button Grid.Column="0"
+                            <!--<Button Grid.Column="0"
                                 Command="{Binding LoadItems}"
-                                Content="Read data" Margin="44,425,624,12" />
+                                Content="Read data" Margin="44,425,624,12" />-->
 
                         </Grid>
                     </TabItem>

@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="LoLHelpAplication.View.HistoryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Margin="0,0,-157,-48">
+        <Label Content="{Binding Winner}" HorizontalAlignment="Left" Margin="236,10,0,0" VerticalAlignment="Top" Width="131"/>
+        <Label Content="Winner" HorizontalAlignment="Left" Margin="67,10,0,0" VerticalAlignment="Top" Width="104"/>
+
+        <Label Content="{Binding ChampionId}" HorizontalAlignment="Left" Margin="236,35,0,0" VerticalAlignment="Top" Width="131" />
+        <Label Content="Champion" HorizontalAlignment="Left" Margin="67,41,0,0" VerticalAlignment="Top" Width="104"/>
+
+        <Label Content="{Binding Kills}" HorizontalAlignment="Left" Margin="236,66,0,0" VerticalAlignment="Top" Width="131" />
+        <Label Content="Kill" HorizontalAlignment="Left" Margin="67,66,0,0" VerticalAlignment="Top" Width="104"/>
+
+        <Label Content="{Binding Deaths}" HorizontalAlignment="Left" Margin="236,97,0,0" VerticalAlignment="Top" Width="131"/>
+        <Label Content="Deaths" HorizontalAlignment="Left" Margin="67,97,0,0" VerticalAlignment="Top" Width="104"/>
+
+        <Label Content="{Binding Assists}" HorizontalAlignment="Left" Margin="236,131,0,0" VerticalAlignment="Top" Width="131" />
+        <Label Content="Assist" HorizontalAlignment="Left" Margin="67,131,0,0" VerticalAlignment="Top" Width="104"/>
+        
+        <Label Content="{Binding Item0Id}" HorizontalAlignment="Left" Margin="236,160,0,0" VerticalAlignment="Top" Width="131" />
+        <Label Content="Item0Id" HorizontalAlignment="Left" Margin="67,160,0,0" VerticalAlignment="Top" Width="104"/>
+
+        <Label Content="{Binding Item1Id}" HorizontalAlignment="Left" Margin="236,189,0,0" VerticalAlignment="Top" Width="131" />
+        <Label Content="Item1Id" HorizontalAlignment="Left" Margin="67,189,0,0" VerticalAlignment="Top" Width="104"/>
+
+        <Label Content="{Binding Item2Id}" HorizontalAlignment="Left" Margin="236,218,0,0" VerticalAlignment="Top" Width="131" />
+        <Label Content="Item2Id" HorizontalAlignment="Left" Margin="67,218,0,0" VerticalAlignment="Top" Width="104"/>
+
+        <Label Content="{Binding Item3Id}" HorizontalAlignment="Left" Margin="236,247,0,0" VerticalAlignment="Top" Width="131" />
+        <Label Content="Item3Id" HorizontalAlignment="Left" Margin="67,247,0,0" VerticalAlignment="Top" Width="104"/>
+
+        <Label Content="{Binding Item4Id}" HorizontalAlignment="Left" Margin="236,276,0,0" VerticalAlignment="Top" Width="131" />
+        <Label Content="Item4Id" HorizontalAlignment="Left" Margin="67,276,0,0" VerticalAlignment="Top" Width="104"/>
+
+        <Label Content="{Binding Item5Id}" HorizontalAlignment="Left" Margin="236,305,0,0" VerticalAlignment="Top" Width="131" />
+        <Label Content="Item5Id" HorizontalAlignment="Left" Margin="67,305,0,0" VerticalAlignment="Top" Width="104"/>
+
+        <Label Content="{Binding Item6Id}" HorizontalAlignment="Left" Margin="236,334,0,0" VerticalAlignment="Top" Width="131" />
+        <Label Content="Item6Id" HorizontalAlignment="Left" Margin="67,334,0,0" VerticalAlignment="Top" Width="104"/>
+        
+
+    </Grid>
+</UserControl>
