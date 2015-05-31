@@ -26,6 +26,7 @@ namespace LoLHelpAplication.Game
         [DataMember]
         public string platformId { get; set; }
         [DataMember]
+        
         public List<CurrentGameParticipant> participants { get; set; }
     }
 }

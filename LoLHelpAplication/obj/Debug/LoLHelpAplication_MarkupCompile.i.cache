@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\Visual Studio 2013\LoLHelpAplication\LoLHelpAplication\App.xaml
-6-1517714515
+7-2078970747
 
-50-1260478469
+51-1552886758
 181718940102
-MainWindow.xaml;playerWindow.xaml;View\ChampionView.xaml;View\HistoryView.xaml;View\ItemViews.xaml;View\SpellViews.xaml;
+MainWindow.xaml;playerWindow.xaml;View\ChampionView.xaml;View\CurrentView.xaml;View\HistoryView.xaml;View\ItemViews.xaml;View\SpellViews.xaml;
 
-True
+False
 

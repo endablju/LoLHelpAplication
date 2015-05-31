@@ -21,7 +21,8 @@ namespace LoLHelpAplication.ViewModel
                 _gameMode = info.gameMode,
                 _gameType = info.gameType,
                 _mapId = info.mapId,
-                //Participants = CurrentGameParticipantsViewModel.fromParticipants(info.participants.);
+                //_participants = CurrentGameParticipantsViewModel.fromParticipants(info.participants.First());
+                    //Participants = CurrentGameParticipantsViewModel.fromParticipants(info.participants.);
                 //_participants =   
             };
         }

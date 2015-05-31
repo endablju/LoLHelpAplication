@@ -14,7 +14,7 @@
 
                 <TabItem FontSize="18" Header="Current Game" Margin="219,0,-223,-2" >
                     <Grid>
-                        
+                        <views:CurrentView DataContext="{Binding GameInfo}" DockPanel.Dock="Top" HorizontalAlignment="Left" Width="874" Margin="38,36,0,36" Height="403" />
                     </Grid>
                 </TabItem>
 

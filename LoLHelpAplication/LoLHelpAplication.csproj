@@ -97,6 +97,9 @@
     <Compile Include="View\ChampionView.xaml.cs">
       <DependentUpon>ChampionView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\CurrentView.xaml.cs">
+      <DependentUpon>CurrentView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\HistoryView.xaml.cs">
       <DependentUpon>HistoryView.xaml</DependentUpon>
     </Compile>
@@ -124,6 +127,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ChampionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CurrentView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

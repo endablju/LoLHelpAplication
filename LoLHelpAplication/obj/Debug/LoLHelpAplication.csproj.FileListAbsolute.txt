@@ -27,3 +27,5 @@ E:\Visual Studio 2013\LoLHelpAplication\LoLHelpAplication\obj\Debug\View\History
 E:\Visual Studio 2013\LoLHelpAplication\LoLHelpAplication\obj\Debug\View\HistoryView.g.cs
 E:\Visual Studio 2013\LoLHelpAplication\LoLHelpAplication\obj\Debug\View\ChampionView.baml
 E:\Visual Studio 2013\LoLHelpAplication\LoLHelpAplication\obj\Debug\View\ChampionView.g.cs
+E:\Visual Studio 2013\LoLHelpAplication\LoLHelpAplication\obj\Debug\View\CurrentView.baml
+E:\Visual Studio 2013\LoLHelpAplication\LoLHelpAplication\obj\Debug\View\CurrentView.g.cs
