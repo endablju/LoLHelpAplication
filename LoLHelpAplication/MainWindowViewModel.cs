@@ -63,9 +63,9 @@ namespace LoLHelpAplication
             }
         }
 
-        private LoLHelpAplication.League.Player _findPlayer;
+        private PlayerViewModel _findPlayer;
 
-        public LoLHelpAplication.League.Player FindPlayer
+        public PlayerViewModel FindPlayer
         {
             get { return _findPlayer; }
             set 
@@ -83,9 +83,9 @@ namespace LoLHelpAplication
             set { _matchList = value; RaisePropertyChanged(); }
         }
 
-        private CurrentGameInfo _gameInfo;
+        private GameViewModel _gameInfo;
 
-        public CurrentGameInfo GameInfo
+        public GameViewModel GameInfo
         {
             get { return _gameInfo; }
             set { _gameInfo = value; RaisePropertyChanged(); }
@@ -105,10 +105,8 @@ namespace LoLHelpAplication
 
                 }
                 var player = JsonConvert.DeserializeObject<Dictionary<string, LoLHelpAplication.League.Player>>(result);
-                FindPlayer = player.Values.First(); 
-                //PlayerList.Add(new PlayerViewModel() { id = player.Values.First().id, name = player.Values.First().name, summonerLevel = player.Values.First().summonerLevel, revisionDate = player.Values.First().revisionDate, profileIconId = player.Values.First().profileIconId });
-                //PlayerList.Add(PlayerViewModel.FromPlayer(player.Values.First()));
-                IdTextBox = FindPlayer.id.ToString();
+                FindPlayer = PlayerViewModel.FromPlayer(player.Values.First());
+                IdTextBox = FindPlayer.Id.ToString();
                 
             }
             catch (WebException ex)
@@ -344,7 +342,7 @@ namespace LoLHelpAplication
 
                 }
                 var gameInfo = JsonConvert.DeserializeObject<CurrentGameInfo>(result);
-                GameInfo = gameInfo;
+                GameInfo = GameViewModel.FromGame(gameInfo);
             }
             catch (WebException ex)
             {

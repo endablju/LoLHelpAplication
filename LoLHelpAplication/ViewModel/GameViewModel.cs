@@ -75,10 +75,9 @@ namespace LoLHelpAplication.ViewModel
         }
 
 
-
-        private List<CurrentGameParticipantsViewModel> _participants;
-
-        public List<CurrentGameParticipantsViewModel> Participants
+        private List<CurrentGameParticipant> _participants;
+     
+        public List<CurrentGameParticipant> Participants
         {
             get { return _participants; }
             set { _participants = value; RaisePropertyChanged(); }
