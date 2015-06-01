@@ -95,6 +95,12 @@
                                     <DataTemplate DataType="ViewModel:ItemViewModel">
                                         <Border>
                                             <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="50" />
+                                                    <ColumnDefinition Width="Auto" SharedSizeGroup="Names" />
+                                                    <ColumnDefinition Width="20" />
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Grid.Column="0" Text="{Binding Id}" />
                                                 <TextBlock Grid.Column="1" Text="{Binding Name}" />
                                             </Grid>
                                         </Border>

@@ -175,7 +175,13 @@ namespace LoLHelpAplication
                         ItemList.Add(ItemViewModel.FromItem(item.Value));
                     }
                     //IsLoadingItems = false;
-                }, TaskScheduler.FromCurrentSynchronizationContext());
+                }, TaskScheduler.FromCurrentSynchronizationContext())
+                .ContinueWith(
+                task =>
+                {
+                    ItemList = new ObservableCollection<ItemViewModel>(ItemList.OrderBy(i => i.Id));
+                }
+                );
         }
 
         private ItemViewModel _selectedItem;
@@ -218,7 +224,13 @@ namespace LoLHelpAplication
                         SpellList.Add(SpellViewModel.FromSpell(spell.Value));
                     }
                     //IsLoadingSpells = false;
-                }, TaskScheduler.FromCurrentSynchronizationContext());
+                }, TaskScheduler.FromCurrentSynchronizationContext())
+                .ContinueWith(
+                task =>
+                {
+                    SpellList = new ObservableCollection<SpellViewModel>(SpellList.OrderBy(i => i.SummonerLevel));
+                }
+                );
         }
 
         private void OnLoadChampions(object _)
@@ -239,7 +251,14 @@ namespace LoLHelpAplication
                         ChampionList.Add(ChampionViewModel.FromChampion(champion.Value));
                     }
                     //IsLoadingChampions = false;
-                }, TaskScheduler.FromCurrentSynchronizationContext());
+
+                }, TaskScheduler.FromCurrentSynchronizationContext())
+                .ContinueWith(
+                task => 
+                {
+                    ChampionList = new ObservableCollection<ChampionViewModel>(ChampionList.OrderBy(i => i.Id));
+                }
+                );
         }
 
         private void searchMatchHistory(object _)
