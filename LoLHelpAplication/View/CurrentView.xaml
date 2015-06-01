@@ -17,14 +17,14 @@
         <Label Content="{Binding EncryptionKey}" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="318"/>
         <Label Content="{Binding GameId}" HorizontalAlignment="Left" Margin="26,42,0,0" VerticalAlignment="Top" Width="318"/>
         <Label Content="{Binding PlatformId}" HorizontalAlignment="Left"  Margin="26,73,0,0" VerticalAlignment="Top" Width="318"/>
-        <ListView HorizontalAlignment="Left" Height="241" Margin="26,131,0,0" VerticalAlignment="Top" Width="625" ItemsSource="{Binding Participants}">
+        <ListView HorizontalAlignment="Left" Height="267" Margin="26,105,0,0" VerticalAlignment="Top" Width="625" ItemsSource="{Binding Participants}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Team" DisplayMemberBinding="{Binding teamId}" />
-                    <GridViewColumn Header="Chempion Id" DisplayMemberBinding="{Binding championId}" />
+                    <GridViewColumn Header="Champion " DisplayMemberBinding="{Binding championStr}" />
                     <GridViewColumn Header="Summary Name" DisplayMemberBinding="{Binding summonerName}" />
-                    <GridViewColumn Header="Spell_1" DisplayMemberBinding="{Binding spell1Id}" />
-                    <GridViewColumn Header="Spell_2" DisplayMemberBinding="{Binding spell2Id}" />
+                    <GridViewColumn Header="Spell 1" DisplayMemberBinding="{Binding spell1Str}" />
+                    <GridViewColumn Header="Spell 2" DisplayMemberBinding="{Binding spell2Str}" />
                 </GridView>
             </ListView.View>
         </ListView>

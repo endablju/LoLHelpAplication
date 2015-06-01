@@ -342,6 +342,18 @@ namespace LoLHelpAplication
                 }
                 var gameInfo = JsonConvert.DeserializeObject<CurrentGameInfo>(result);
                 GameInfo = GameViewModel.FromGame(gameInfo);
+                var spell1 = from spel1 in GameInfo.Participants join sp1 in SpellList on spel1.spell1Id equals sp1.Id select new { sp1.Name };
+                var spell2 = from spel2 in GameInfo.Participants join sp2 in SpellList on spel2.spell2Id equals sp2.Id select new { sp2.Name };
+                var champion = from champ in  GameInfo.Participants join ch in ChampionList on champ.championId equals ch.Id select new { ch.Name };
+
+                int i = 0;
+                foreach (var ch in GameInfo.Participants)
+                {
+                    ch.championStr = champion.ElementAt(i).Name;
+                    ch.spell1Str = spell1.ElementAt(i).Name;
+                    ch.spell2Str = spell2.ElementAt(i).Name;
+                    i++;
+                }
             }
             catch (WebException ex)
             {
