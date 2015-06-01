@@ -23,6 +23,12 @@ namespace LoLHelpAplication.Game
         [DataMember]
         public long summaryId { get; set; }
         [DataMember]
-        public string summaryName { get; set; }
+        public string summonerName { get; set; }
+
+        public string championStr { get; set; }
+        [DataMember]
+        public string spell1Str { get; set; }
+        [DataMember]
+        public string spell2Str { get; set; }
     }
 }
