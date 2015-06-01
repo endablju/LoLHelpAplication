@@ -347,7 +347,7 @@ namespace LoLHelpAplication.ViewModel
             set { _sumarryId = value; RaisePropertyChanged();}
         }
 
-       /* private string _championString;
+        private string _championString;
 
         public string ChampionString
         {
@@ -357,6 +357,84 @@ namespace LoLHelpAplication.ViewModel
                 _championString = value;
                 RaisePropertyChanged();
             }
-        }*/
+        }
+
+        private string _item0Str;
+
+        public string Item0Str
+        {
+            get { return _item0Str; }
+            set
+            {
+                _item0Str = value;
+                RaisePropertyChanged();
+            }
+        }
+        private string _item1Str;
+
+        public string Item1Str
+        {
+            get { return _item1Str; }
+            set
+            {
+                _item1Str = value;
+                RaisePropertyChanged();
+            }
+        }
+        private string _item2Str;
+
+        public string Item2Str
+        {
+            get { return _item2Str; }
+            set
+            {
+                _item2Str = value;
+                RaisePropertyChanged();
+            }
+        }
+        private string _item3Str;
+
+        public string Item3Str
+        {
+            get { return _item3Str; }
+            set
+            {
+                _item3Str = value;
+                RaisePropertyChanged();
+            }
+        }
+        private string _item4Str;
+
+        public string Item4Str
+        {
+            get { return _item4Str; }
+            set
+            {
+                _item4Str = value;
+                RaisePropertyChanged();
+            }
+        }
+        private string _item5Str;
+
+        public string Item5Str
+        {
+            get { return _item5Str; }
+            set
+            {
+                _item5Str = value;
+                RaisePropertyChanged();
+            }
+        }
+        private string _item6Str;
+
+        public string Item6Str
+        {
+            get { return _item6Str; }
+            set
+            {
+                _item6Str = value;
+                RaisePropertyChanged();
+            }
+        }
     }
 }

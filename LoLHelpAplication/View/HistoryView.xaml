@@ -9,7 +9,7 @@
         <Label Content="{Binding Winner}" HorizontalAlignment="Left" Margin="236,10,0,0" VerticalAlignment="Top" Width="131"/>
         <Label Content="Winner" HorizontalAlignment="Left" Margin="67,10,0,0" VerticalAlignment="Top" Width="104"/>
 
-        <Label Content="{Binding ChampionId}" HorizontalAlignment="Left" Margin="236,35,0,0" VerticalAlignment="Top" Width="131" />
+        <Label Content="{Binding ChampionString}" HorizontalAlignment="Left" Margin="236,35,0,0" VerticalAlignment="Top" Width="131" />
         <Label Content="Champion" HorizontalAlignment="Left" Margin="67,41,0,0" VerticalAlignment="Top" Width="104"/>
 
         <Label Content="{Binding Kills}" HorizontalAlignment="Left" Margin="236,66,0,0" VerticalAlignment="Top" Width="131" />
@@ -20,28 +20,28 @@
 
         <Label Content="{Binding Assists}" HorizontalAlignment="Left" Margin="236,131,0,0" VerticalAlignment="Top" Width="131" />
         <Label Content="Assist" HorizontalAlignment="Left" Margin="67,131,0,0" VerticalAlignment="Top" Width="104"/>
-        
-        <Label Content="{Binding Item0Id}" HorizontalAlignment="Left" Margin="236,160,0,0" VerticalAlignment="Top" Width="131" />
-        <Label Content="Item0Id" HorizontalAlignment="Left" Margin="67,160,0,0" VerticalAlignment="Top" Width="104"/>
 
-        <Label Content="{Binding Item1Id}" HorizontalAlignment="Left" Margin="236,189,0,0" VerticalAlignment="Top" Width="131" />
-        <Label Content="Item1Id" HorizontalAlignment="Left" Margin="67,189,0,0" VerticalAlignment="Top" Width="104"/>
+        <Label Content="{Binding Item0Str}" HorizontalAlignment="Left" Margin="236,160,0,0" VerticalAlignment="Top" Width="197" Height="10" />
+        <Label Content="Item 0" HorizontalAlignment="Left" Margin="67,160,0,0" VerticalAlignment="Top" Width="104"/>
 
-        <Label Content="{Binding Item2Id}" HorizontalAlignment="Left" Margin="236,218,0,0" VerticalAlignment="Top" Width="131" />
-        <Label Content="Item2Id" HorizontalAlignment="Left" Margin="67,218,0,0" VerticalAlignment="Top" Width="104"/>
+        <Label Content="{Binding Item1Str}" HorizontalAlignment="Left" Margin="236,189,0,0" VerticalAlignment="Top" Width="197" />
+        <Label Content="Item 1" HorizontalAlignment="Left" Margin="67,189,0,0" VerticalAlignment="Top" Width="104"/>
 
-        <Label Content="{Binding Item3Id}" HorizontalAlignment="Left" Margin="236,247,0,0" VerticalAlignment="Top" Width="131" />
-        <Label Content="Item3Id" HorizontalAlignment="Left" Margin="67,247,0,0" VerticalAlignment="Top" Width="104"/>
+        <Label Content="{Binding Item2Str}" HorizontalAlignment="Left" Margin="236,218,0,0" VerticalAlignment="Top" Width="197" />
+        <Label Content="Item 2" HorizontalAlignment="Left" Margin="67,218,0,0" VerticalAlignment="Top" Width="104"/>
 
-        <Label Content="{Binding Item4Id}" HorizontalAlignment="Left" Margin="236,276,0,0" VerticalAlignment="Top" Width="131" />
-        <Label Content="Item4Id" HorizontalAlignment="Left" Margin="67,276,0,0" VerticalAlignment="Top" Width="104"/>
+        <Label Content="{Binding Item3Str}" HorizontalAlignment="Left" Margin="236,247,0,0" VerticalAlignment="Top" Width="197" />
+        <Label Content="Item 3" HorizontalAlignment="Left" Margin="67,247,0,0" VerticalAlignment="Top" Width="104"/>
 
-        <Label Content="{Binding Item5Id}" HorizontalAlignment="Left" Margin="236,305,0,0" VerticalAlignment="Top" Width="131" />
-        <Label Content="Item5Id" HorizontalAlignment="Left" Margin="67,305,0,0" VerticalAlignment="Top" Width="104"/>
+        <Label Content="{Binding Item4Str}" HorizontalAlignment="Left" Margin="236,276,0,0" VerticalAlignment="Top" Width="197" />
+        <Label Content="Item 4" HorizontalAlignment="Left" Margin="67,276,0,0" VerticalAlignment="Top" Width="104"/>
 
-        <Label Content="{Binding Item6Id}" HorizontalAlignment="Left" Margin="236,334,0,0" VerticalAlignment="Top" Width="131" />
-        <Label Content="Item6Id" HorizontalAlignment="Left" Margin="67,334,0,0" VerticalAlignment="Top" Width="104"/>
-        
+        <Label Content="{Binding Item5Str}" HorizontalAlignment="Left" Margin="236,305,0,0" VerticalAlignment="Top" Width="197" />
+        <Label Content="Item 5" HorizontalAlignment="Left" Margin="67,305,0,0" VerticalAlignment="Top" Width="104"/>
+
+        <Label Content="{Binding Item6Str}" HorizontalAlignment="Left" Margin="236,334,0,0" VerticalAlignment="Top" Width="197" />
+        <Label Content="Item 6" HorizontalAlignment="Left" Margin="67,334,0,0" VerticalAlignment="Top" Width="104"/>
+
 
     </Grid>
 </UserControl>

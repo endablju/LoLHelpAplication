@@ -5047,6 +5047,27 @@
             "sell": 1820,
             "base": 850
          }
+      },
+      "0": {
+         "id": 0,
+         "description": "",
+         "name": "",
+         "image": {
+            "w": 0,
+            "full": "",
+            "sprite": "",
+            "group": "",
+            "h": 0,
+            "y": 0,
+            "x": 0
+         },
+         "gold": {
+            "total": 0,
+            "purchasable": true,
+            "sell": 0,
+            "base": 0
+         },
+         "group": ""
       }
    },
    "type": "item",

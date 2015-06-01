@@ -278,7 +278,32 @@ namespace LoLHelpAplication
                 
                 foreach (var listMatchHistory in matchHistory.matches)
                 {
-                MatchList.Add(MatchViewModel.FromMatchHistory(listMatchHistory));                   
+                    MatchList.Add(MatchViewModel.FromMatchHistory(listMatchHistory));                   
+                }
+                
+                var id_name = from match in MatchList join champion in ChampionList on match.ChampionId equals champion.Id select new{champion.Name};
+                var item0 = from match in MatchList join item in ItemList on match.Item0Id equals item.Id select new{item.Name};
+                var item1 = from match in MatchList join item in ItemList on match.Item1Id equals item.Id select new { item.Name };
+                var item2 = from match in MatchList join item in ItemList on match.Item2Id equals item.Id select new { item.Name };
+                var item3 = from match in MatchList join item in ItemList on match.Item3Id equals item.Id select new { item.Name };
+                var item4 = from match in MatchList join item in ItemList on match.Item4Id equals item.Id select new { item.Name };
+                var item5 = from match in MatchList join item in ItemList on match.Item5Id equals item.Id select new { item.Name };
+                var item6 = from match in MatchList join item in ItemList on match.Item6Id equals item.Id select new { item.Name };
+
+                int i = 0;
+                foreach (var list in MatchList )
+                {
+                    list.ChampionString = id_name.ElementAt(i).Name;
+                    
+                    list.Item0Str = item0.ElementAt(i).Name;
+                    list.Item1Str = item1.ElementAt(i).Name;
+                    list.Item2Str = item2.ElementAt(i).Name;
+                    list.Item3Str = item3.ElementAt(i).Name;
+                    list.Item4Str = item4.ElementAt(i).Name;
+                    list.Item5Str = item5.ElementAt(i).Name;
+                    list.Item6Str = item6.ElementAt(i).Name;
+                    
+                    i++;
                 }
             }
             catch (WebException ex)
