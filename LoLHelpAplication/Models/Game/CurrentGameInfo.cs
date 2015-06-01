@@ -22,7 +22,7 @@ namespace LoLHelpAplication.Game
         [DataMember]
         public Observer observers { get; set; }
         [DataMember]
-        public BannedChampion bannedChampions { get; set; }
+        public List<BannedChampion> bannedChampions { get; set; }
         [DataMember]
         public string platformId { get; set; }
         [DataMember]

@@ -22,7 +22,7 @@ namespace LoLHelpAplication.Services
                 string text = reader.ReadToEnd();
                 result = JsonConvert.DeserializeObject<ItemListDto>(text);
             }
-            Thread.Sleep(TimeSpan.FromSeconds(3));
+            Thread.Sleep(TimeSpan.FromSeconds(1));
             
             return result;
         }

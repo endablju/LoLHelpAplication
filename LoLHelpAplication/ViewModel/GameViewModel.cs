@@ -21,9 +21,9 @@ namespace LoLHelpAplication.ViewModel
                 _gameMode = info.gameMode,
                 _gameType = info.gameType,
                 _mapId = info.mapId,
-                //_participants = CurrentGameParticipantsViewModel.fromParticipants(info.participants.First());
-                    //Participants = CurrentGameParticipantsViewModel.fromParticipants(info.participants.);
-                //_participants =   
+                _participants = info.participants,  
+                _platformId = info.platformId
+
             };
         }
 
@@ -58,12 +58,12 @@ namespace LoLHelpAplication.ViewModel
             set { _mapId = value; RaisePropertyChanged(); }
         }
 
-        private string platformId;
+        private string _platformId;
 
         public string PlatformId
         {
-            get { return platformId; }
-            set { platformId = value; RaisePropertyChanged(); }
+            get { return _platformId; }
+            set { _platformId = value; RaisePropertyChanged(); }
         }
 
         private string _encryptionKey;

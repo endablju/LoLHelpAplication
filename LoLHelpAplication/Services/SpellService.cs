@@ -15,14 +15,14 @@ namespace LoLHelpAplication.Services
     {
         public static SummonerSpellListDto GetSpells()
         {
-            Thread.Sleep(TimeSpan.FromSeconds(3));
+            Thread.Sleep(TimeSpan.FromSeconds(1));
             SummonerSpellListDto result;
             using (StreamReader reader = File.OpenText(@"Data\summoner_spells.json"))
             {
                 string text = reader.ReadToEnd();
                 result = JsonConvert.DeserializeObject<SummonerSpellListDto>(text);
             }
-            Thread.Sleep(TimeSpan.FromSeconds(3));
+            Thread.Sleep(TimeSpan.FromSeconds(1));
 
             return result;
         }

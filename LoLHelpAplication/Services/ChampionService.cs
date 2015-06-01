@@ -14,14 +14,14 @@ namespace LoLHelpAplication.Services
     {
         public static ChampionsListDto GetChampions()
         {
-            Thread.Sleep(TimeSpan.FromSeconds(3));
+            Thread.Sleep(TimeSpan.FromSeconds(1));
             ChampionsListDto result;
             using (StreamReader reader = File.OpenText(@"Data\champions.json"))
             {
                 string text = reader.ReadToEnd();
                 result = JsonConvert.DeserializeObject<ChampionsListDto>(text);
             }
-            Thread.Sleep(TimeSpan.FromSeconds(3));
+            Thread.Sleep(TimeSpan.FromSeconds(1));
 
             return result;
         }

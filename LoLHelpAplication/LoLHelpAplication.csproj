@@ -89,7 +89,6 @@
     <Compile Include="Models\ImageDto.cs" />
     <Compile Include="Models\Items\ItemDto.cs" />
     <Compile Include="Models\Items\ItemListDto.cs" />
-    <Compile Include="ViewModel\CurrentGameParticipantsViewModel.cs" />
     <Compile Include="ViewModel\GameViewModel.cs" />
     <Compile Include="ViewModel\ItemViewModel.cs" />
     <Compile Include="MainWindowViewModel.cs" />

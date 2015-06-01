@@ -254,7 +254,7 @@ namespace LoLHelpAplication
                 .ContinueWith(
                 task => 
                 {
-                    ChampionList = new ObservableCollection<ChampionViewModel>(ChampionList.OrderBy(i => i.Id));
+                    ChampionList = new ObservableCollection<ChampionViewModel>(ChampionList.OrderBy(i => i.Name));
                 }
                 );
         }
@@ -339,7 +339,6 @@ namespace LoLHelpAplication
                 {
                     StreamReader reader = new StreamReader(resp.GetResponseStream());
                     result = reader.ReadToEnd();
-
                 }
                 var gameInfo = JsonConvert.DeserializeObject<CurrentGameInfo>(result);
                 GameInfo = GameViewModel.FromGame(gameInfo);
@@ -357,7 +356,6 @@ namespace LoLHelpAplication
                     MessageBox.Show("Internal Server Error");
                 else if (errorResponse.StatusCode == HttpStatusCode.Unauthorized)
                     MessageBox.Show("Unauthorized");
-
             }
         }
        

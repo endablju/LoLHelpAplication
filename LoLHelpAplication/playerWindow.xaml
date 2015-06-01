@@ -3,6 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:views="clr-namespace:LoLHelpAplication.View"
         Title="Player" Height="600" Width="1024">
+
+
     <Grid>
         <Label Content="Label" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" Width="298" FontSize="25" Name="PlayerLabel" />
         <Label Content="{Binding IdTextBox}" HorizontalAlignment="Left" Margin="40,71,0,0" VerticalAlignment="Top" Width="263" IsEnabled="false"/>
@@ -30,8 +32,9 @@
                                                 <ColumnDefinition Width="20" />
                                             </Grid.ColumnDefinitions>
 
-                                            <TextBlock Grid.Column="0" Text="{Binding Winner}"/>
+                                            <!--<TextBlock Grid.Column="0" Text="{Binding Winner}"/>-->
                                             <TextBlock Grid.Column="1" Text="{Binding ChampionString}"/>
+                                            
                                         </Grid>
                                     </Border>
                                 </DataTemplate>
