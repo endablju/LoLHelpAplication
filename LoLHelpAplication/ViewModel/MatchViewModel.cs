@@ -17,7 +17,6 @@ namespace LoLHelpAplication.ViewModel
                 _mapId = match.matchId,
                 _assists = match.participants.Single().stats.assists,
                 _bot = match.participants.Single().bot,
-                //_championString =  ,
                 _championId = match.participants.Single().championId,
                 _deaths = match.participants.Single().stats.deaths,
                 _goldEarned = match.participants.Single().stats.goldEarned,

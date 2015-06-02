@@ -157,8 +157,6 @@ namespace LoLHelpAplication
 
         private void OnLoadItems(object _)
         {
-            //IsLoadingItems = true;
-
             Task<ItemListDto>.Factory.StartNew(
                 () =>
                 {
@@ -172,7 +170,6 @@ namespace LoLHelpAplication
                     {
                         ItemList.Add(ItemViewModel.FromItem(item.Value));
                     }
-                    //IsLoadingItems = false;
                 }, TaskScheduler.FromCurrentSynchronizationContext())
                 .ContinueWith(
                 task =>

@@ -76,7 +76,8 @@ namespace LoLHelpAplication
             get { return _full; }
             set
             {
-                _full = "http://ddragon.leagueoflegends.com/cdn/5.2.1/img/" + _group + "/" + value;
+                //_full = "http://ddragon.leagueoflegends.com/cdn/5.2.1/img/" + _group + "/" + value;
+                _full = value;
                 OnPropertyChanged();
             }
         }
