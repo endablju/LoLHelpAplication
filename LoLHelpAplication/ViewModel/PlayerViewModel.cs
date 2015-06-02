@@ -28,7 +28,7 @@ namespace LoLHelpAplication
             get { return _id; }
             set { 
                     _id = value;
-                    RaisePropertyChanged();
+                    OnPropertyChanged();
                 }
         }
         
@@ -40,7 +40,7 @@ namespace LoLHelpAplication
             set 
             { 
                 _name = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -52,7 +52,7 @@ namespace LoLHelpAplication
             set 
             { 
                 _summonerLevel = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -64,7 +64,7 @@ namespace LoLHelpAplication
             set 
             { 
                 _profileIconId = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -76,7 +76,7 @@ namespace LoLHelpAplication
             set 
             { 
                 _revisionDate = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 

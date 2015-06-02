@@ -17,6 +17,7 @@ namespace LoLHelpAplication
                 _title = champions.title,
                 _full = champions.image.Full,
                 _group = champions.image.Group,
+                _blurb = champions.blurb
             };
         }
         
@@ -28,7 +29,7 @@ namespace LoLHelpAplication
             set 
             { 
                 _id = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -40,7 +41,7 @@ namespace LoLHelpAplication
             set 
             { 
                 _name = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -52,7 +53,7 @@ namespace LoLHelpAplication
             set 
             { 
                 _title = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -65,7 +66,7 @@ namespace LoLHelpAplication
             set 
             { 
                 _group = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -75,7 +76,7 @@ namespace LoLHelpAplication
             set 
             { 
                 _full = "http://ddragon.leagueoflegends.com/cdn/5.2.1/img/" + _group + "/" + value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -85,6 +86,14 @@ namespace LoLHelpAplication
         {
             get { return _key; }
             set { _key = value; }
+        }
+
+        private string _blurb;
+
+        public string Blurb
+        {
+            get { return _blurb; }
+            set { _blurb = value; }
         }
 
         public string DisplayedImage

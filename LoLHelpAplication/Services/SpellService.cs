@@ -17,7 +17,7 @@ namespace LoLHelpAplication.Services
         {
             Thread.Sleep(TimeSpan.FromSeconds(1));
             SummonerSpellListDto result;
-            using (StreamReader reader = File.OpenText(@"Data\summoner_spells.json"))
+            using (StreamReader reader = File.OpenText(@"..\..\Data\summoner_spells.json"))
             {
                 string text = reader.ReadToEnd();
                 result = JsonConvert.DeserializeObject<SummonerSpellListDto>(text);

@@ -19,7 +19,7 @@ namespace LoLHelpAplication
                 _group = spells.image.Group,
                 _full = spells.image.Full,
                 _key = spells.key,
-                _summonerLevel = spells.SummonerLevel
+                _summonerLevel = spells.SummonerLevel,
             };
         }
         private int _id;
@@ -30,7 +30,7 @@ namespace LoLHelpAplication
             set
             {
                 _id = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -42,7 +42,7 @@ namespace LoLHelpAplication
             set
             {
                 _name = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -54,7 +54,7 @@ namespace LoLHelpAplication
             set
             {
                 _descriptions = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -67,7 +67,7 @@ namespace LoLHelpAplication
             set
             {
                 _group = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -77,7 +77,7 @@ namespace LoLHelpAplication
             set
             {
                 _full = "http://ddragon.leagueoflegends.com/cdn/5.2.1/img/" + _group + "/" + value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -89,7 +89,7 @@ namespace LoLHelpAplication
             set 
             {
                 _key = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -101,8 +101,14 @@ namespace LoLHelpAplication
             set 
             { 
                 _summonerLevel = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
+        }
+
+
+        public string GetSummonerLevel
+        {
+            get { return "Min level " + _summonerLevel; }   
         }
 
         public string DisplayedImage

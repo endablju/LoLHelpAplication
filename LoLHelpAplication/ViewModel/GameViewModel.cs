@@ -32,14 +32,14 @@ namespace LoLHelpAplication.ViewModel
         public long GameId
         {
             get { return _gameId; }
-            set { _gameId = value; RaisePropertyChanged(); }
+            set { _gameId = value; OnPropertyChanged(); }
         }
         private string _gameType;
 
         public string GameType
         {
             get { return _gameType; }
-            set { _gameType = value; RaisePropertyChanged(); }
+            set { _gameType = value; OnPropertyChanged(); }
         }
 
         private string _gameMode;
@@ -47,7 +47,7 @@ namespace LoLHelpAplication.ViewModel
         public string GameMode
         {
             get { return _gameMode; }
-            set { _gameMode = value; RaisePropertyChanged(); }
+            set { _gameMode = value; OnPropertyChanged(); }
         }
 
         private long _mapId;
@@ -55,7 +55,7 @@ namespace LoLHelpAplication.ViewModel
         public long MapId
         {
             get { return _mapId; }
-            set { _mapId = value; RaisePropertyChanged(); }
+            set { _mapId = value; OnPropertyChanged(); }
         }
 
         private string _platformId;
@@ -63,7 +63,7 @@ namespace LoLHelpAplication.ViewModel
         public string PlatformId
         {
             get { return _platformId; }
-            set { _platformId = value; RaisePropertyChanged(); }
+            set { _platformId = value; OnPropertyChanged(); }
         }
 
         private string _encryptionKey;
@@ -71,7 +71,7 @@ namespace LoLHelpAplication.ViewModel
         public string EncryptionKey
         {
             get { return _encryptionKey; }
-            set { _encryptionKey = value; RaisePropertyChanged(); }
+            set { _encryptionKey = value; OnPropertyChanged(); }
         }
 
 
@@ -80,7 +80,7 @@ namespace LoLHelpAplication.ViewModel
         public List<CurrentGameParticipant> Participants
         {
             get { return _participants; }
-            set { _participants = value; RaisePropertyChanged(); }
+            set { _participants = value; OnPropertyChanged(); }
         }
         
 

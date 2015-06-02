@@ -3,9 +3,7 @@ using System.Windows.Input;
 
 namespace LoLHelpAplication.Base
 {
-    /// <summary>
-    /// Prosta implementacja komendy
-    /// </summary>
+
     public class BasicCommand : ICommand
     {
         private readonly Func<object, bool> _canExecute;

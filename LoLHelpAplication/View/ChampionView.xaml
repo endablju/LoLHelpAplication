@@ -9,6 +9,7 @@
         <Image Source="{Binding DisplayedImage}" HorizontalAlignment="Left" Height="185" Margin="30,10,0,0" VerticalAlignment="Top" Width="190"/>
         <Label Content="{Binding Name}" HorizontalAlignment="Left" Margin="249,10,0,0" VerticalAlignment="Top" Width="262" FontSize="25"/>
         <Label Content="{Binding Title}" HorizontalAlignment="Left" Margin="286,78,0,0" VerticalAlignment="Top" Width="198"/>
-        
+        <TextBlock HorizontalAlignment="Left" Height="172" Margin="78,243,0,0" TextWrapping="Wrap" Text="{Binding Blurb}" VerticalAlignment="Top" Width="515"/>
+
     </Grid>
 </UserControl>

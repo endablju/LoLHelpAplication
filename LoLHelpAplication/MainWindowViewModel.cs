@@ -35,7 +35,7 @@ namespace LoLHelpAplication
             set
             {
                 _itemList = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -47,7 +47,7 @@ namespace LoLHelpAplication
             set
             {
                 _spellList = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -59,7 +59,7 @@ namespace LoLHelpAplication
             set
             {
                 _championsList = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -71,7 +71,7 @@ namespace LoLHelpAplication
             set 
             { 
                 _findPlayer = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -80,7 +80,7 @@ namespace LoLHelpAplication
         public ObservableCollection<MatchViewModel> MatchList
         {
             get { return _matchList; }
-            set { _matchList = value; RaisePropertyChanged(); }
+            set { _matchList = value; OnPropertyChanged(); }
         }
 
         private GameViewModel _gameInfo;
@@ -88,7 +88,7 @@ namespace LoLHelpAplication
         public GameViewModel GameInfo
         {
             get { return _gameInfo; }
-            set { _gameInfo = value; RaisePropertyChanged(); }
+            set { _gameInfo = value; OnPropertyChanged(); }
         }
 
         private void searchSummonerByName(object _)
@@ -139,7 +139,7 @@ namespace LoLHelpAplication
             get { return _searchTextBox; }
             set {
                 _searchTextBox = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -151,7 +151,7 @@ namespace LoLHelpAplication
             set
             {
                 _idTextBox = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -189,7 +189,7 @@ namespace LoLHelpAplication
             set
             {
                 _selectedItem = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -200,14 +200,12 @@ namespace LoLHelpAplication
             set
             {
                 _selectedSpell = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         } 
         
         private void OnLoadSpell(object _)
         {
-            //IsLoadingSpells = true;
-
             Task<SummonerSpellListDto>.Factory.StartNew(
                 () =>
                 {
@@ -221,7 +219,6 @@ namespace LoLHelpAplication
                     {
                         SpellList.Add(SpellViewModel.FromSpell(spell.Value));
                     }
-                    //IsLoadingSpells = false;
                 }, TaskScheduler.FromCurrentSynchronizationContext())
                 .ContinueWith(
                 task =>
@@ -233,8 +230,6 @@ namespace LoLHelpAplication
 
         private void OnLoadChampions(object _)
         {
-            //IsLoadingChampions = true;
-
             Task<ChampionsListDto>.Factory.StartNew(
                 () =>
                 {
@@ -248,8 +243,6 @@ namespace LoLHelpAplication
                     {
                         ChampionList.Add(ChampionViewModel.FromChampion(champion.Value));
                     }
-                    //IsLoadingChampions = false;
-
                 }, TaskScheduler.FromCurrentSynchronizationContext())
                 .ContinueWith(
                 task => 
@@ -392,7 +385,7 @@ namespace LoLHelpAplication
             set
             {
                 _selectedMatch = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -403,7 +396,7 @@ namespace LoLHelpAplication
             set
             {
                 _selectedChampion = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         } 
         /*

@@ -17,7 +17,7 @@ namespace LoLHelpAplication.Services
         {
             Thread.Sleep(TimeSpan.FromSeconds(1));
             ItemListDto result;
-            using (StreamReader reader = File.OpenText(@"Data\items.json"))
+            using (StreamReader reader = File.OpenText(@"..\..\Data\items.json"))
             {
                 string text = reader.ReadToEnd();
                 result = JsonConvert.DeserializeObject<ItemListDto>(text);

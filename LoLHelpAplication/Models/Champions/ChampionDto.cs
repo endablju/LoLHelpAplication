@@ -17,5 +17,7 @@ namespace LoLHelpAplication
 
         public string key { get; set; }
 
+        public string blurb { get; set; }
+
     }
 }

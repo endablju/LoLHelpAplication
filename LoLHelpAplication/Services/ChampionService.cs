@@ -16,7 +16,7 @@ namespace LoLHelpAplication.Services
         {
             Thread.Sleep(TimeSpan.FromSeconds(1));
             ChampionsListDto result;
-            using (StreamReader reader = File.OpenText(@"Data\champions.json"))
+            using (StreamReader reader = File.OpenText(@"..\..\Data\champions.json"))
             {
                 string text = reader.ReadToEnd();
                 result = JsonConvert.DeserializeObject<ChampionsListDto>(text);

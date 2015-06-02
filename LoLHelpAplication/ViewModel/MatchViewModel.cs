@@ -55,7 +55,7 @@ namespace LoLHelpAplication.ViewModel
             set 
             { 
                 _mapId = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
         private long _matchDuration;
@@ -66,7 +66,7 @@ namespace LoLHelpAplication.ViewModel
             set 
             { 
                 _matchDuration = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -78,7 +78,7 @@ namespace LoLHelpAplication.ViewModel
             set 
             { 
                 _matchId = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -90,7 +90,7 @@ namespace LoLHelpAplication.ViewModel
             set 
             { 
                 _matchMode = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -102,7 +102,7 @@ namespace LoLHelpAplication.ViewModel
             set 
             { 
                 _queueType = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -111,7 +111,7 @@ namespace LoLHelpAplication.ViewModel
         public string RegionType
         {
             get { return _regionType; }
-            set { _regionType = value; RaisePropertyChanged(); }
+            set { _regionType = value; OnPropertyChanged(); }
         }
 
         private string _sesson;
@@ -119,7 +119,7 @@ namespace LoLHelpAplication.ViewModel
         public string Sesson
         {
             get { return _sesson; }
-            set { _sesson = value; RaisePropertyChanged(); }
+            set { _sesson = value; OnPropertyChanged(); }
         }
 
         private int _championId;
@@ -130,7 +130,7 @@ namespace LoLHelpAplication.ViewModel
             set 
             { 
                 _championId = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -142,7 +142,7 @@ namespace LoLHelpAplication.ViewModel
             set
             {
                 _spell1Id = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -154,7 +154,7 @@ namespace LoLHelpAplication.ViewModel
             set
             {
                 _spell2Id = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
         private int _teamId;
@@ -162,7 +162,7 @@ namespace LoLHelpAplication.ViewModel
         public int TeamId
         {
             get { return _teamId; }
-            set { _teamId = value; RaisePropertyChanged(); }
+            set { _teamId = value; OnPropertyChanged(); }
         }
 
         private bool _bot;
@@ -170,7 +170,7 @@ namespace LoLHelpAplication.ViewModel
         public bool Bot
         {
             get { return _bot; }
-            set { _bot = value; RaisePropertyChanged(); }
+            set { _bot = value; OnPropertyChanged(); }
         }
 
         private long _kills;
@@ -178,7 +178,7 @@ namespace LoLHelpAplication.ViewModel
         public long Kills
         {
             get { return _kills; }
-            set { _kills = value; RaisePropertyChanged(); }
+            set { _kills = value; OnPropertyChanged(); }
         }
 
         private long _deaths;
@@ -186,7 +186,7 @@ namespace LoLHelpAplication.ViewModel
         public long Deaths
         {
             get { return _deaths; }
-            set { _deaths = value; RaisePropertyChanged();}
+            set { _deaths = value; OnPropertyChanged();}
         }
 
         private long _assists;
@@ -194,7 +194,7 @@ namespace LoLHelpAplication.ViewModel
         public long Assists
         {
             get { return _assists; }
-            set { _assists = value; RaisePropertyChanged();}
+            set { _assists = value; OnPropertyChanged();}
         }
 
         private long _goldEarned;
@@ -205,7 +205,7 @@ namespace LoLHelpAplication.ViewModel
             set 
             { 
                 _goldEarned = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
         private long _item0Id;
@@ -215,7 +215,7 @@ namespace LoLHelpAplication.ViewModel
             get { return _item0Id; }
             set { 
                 _item0Id = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
         private long _item1Id;
@@ -226,7 +226,7 @@ namespace LoLHelpAplication.ViewModel
             set
             {
                 _item1Id = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
         private long _item2Id;
@@ -237,7 +237,7 @@ namespace LoLHelpAplication.ViewModel
             set
             {
                 _item2Id = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
         private long _item3Id;
@@ -248,7 +248,7 @@ namespace LoLHelpAplication.ViewModel
             set
             {
                 _item3Id = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
         private long _item4Id;
@@ -259,7 +259,7 @@ namespace LoLHelpAplication.ViewModel
             set
             {
                 _item4Id = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
         private long _item5Id;
@@ -270,7 +270,7 @@ namespace LoLHelpAplication.ViewModel
             set
             {
                 _item5Id = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
         private long _item6Id;
@@ -281,7 +281,7 @@ namespace LoLHelpAplication.ViewModel
             set
             {
                 _item6Id = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -293,7 +293,7 @@ namespace LoLHelpAplication.ViewModel
             set 
             { 
                 _winner = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -303,7 +303,7 @@ namespace LoLHelpAplication.ViewModel
         {
             get { return _lane; }
             set { _lane = value;
-            RaisePropertyChanged();
+            OnPropertyChanged();
             }
         }
 
@@ -315,7 +315,7 @@ namespace LoLHelpAplication.ViewModel
             set 
             { 
                 _role = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -327,7 +327,7 @@ namespace LoLHelpAplication.ViewModel
             set 
             { 
                 _matchHistoryUri = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -336,7 +336,7 @@ namespace LoLHelpAplication.ViewModel
         public string SummaryName
         {
             get { return _summaryName; }
-            set { _summaryName = value; RaisePropertyChanged();}
+            set { _summaryName = value; OnPropertyChanged();}
         }
 
         private long _sumarryId;
@@ -344,7 +344,7 @@ namespace LoLHelpAplication.ViewModel
         public long SummaryId
         {
             get { return _sumarryId; }
-            set { _sumarryId = value; RaisePropertyChanged();}
+            set { _sumarryId = value; OnPropertyChanged();}
         }
 
         private string _championString;
@@ -355,7 +355,7 @@ namespace LoLHelpAplication.ViewModel
             set
             {
                 _championString = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -367,7 +367,7 @@ namespace LoLHelpAplication.ViewModel
             set
             {
                 _item0Str = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
         private string _item1Str;
@@ -378,7 +378,7 @@ namespace LoLHelpAplication.ViewModel
             set
             {
                 _item1Str = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
         private string _item2Str;
@@ -389,7 +389,7 @@ namespace LoLHelpAplication.ViewModel
             set
             {
                 _item2Str = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
         private string _item3Str;
@@ -400,7 +400,7 @@ namespace LoLHelpAplication.ViewModel
             set
             {
                 _item3Str = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
         private string _item4Str;
@@ -411,7 +411,7 @@ namespace LoLHelpAplication.ViewModel
             set
             {
                 _item4Str = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
         private string _item5Str;
@@ -422,7 +422,7 @@ namespace LoLHelpAplication.ViewModel
             set
             {
                 _item5Str = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
         private string _item6Str;
@@ -433,7 +433,7 @@ namespace LoLHelpAplication.ViewModel
             set
             {
                 _item6Str = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
     }

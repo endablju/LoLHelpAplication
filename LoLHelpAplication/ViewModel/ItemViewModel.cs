@@ -30,7 +30,7 @@ namespace LoLHelpAplication
             set
             {
                 _id = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -42,7 +42,7 @@ namespace LoLHelpAplication
             set
             {
                 _name = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -54,7 +54,7 @@ namespace LoLHelpAplication
             set
             {
                 _descriptions = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -67,7 +67,7 @@ namespace LoLHelpAplication
             set
             {
                 _group = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -78,7 +78,7 @@ namespace LoLHelpAplication
             {
                 //_full = "http://ddragon.leagueoflegends.com/cdn/5.2.1/img/" + _group + "/" + value;
                 _full = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -90,7 +90,7 @@ namespace LoLHelpAplication
             set 
             { 
                 _total = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -102,7 +102,7 @@ namespace LoLHelpAplication
             set 
             { 
                 _sell = value;
-                RaisePropertyChanged();
+                OnPropertyChanged();
             }
         }
 
